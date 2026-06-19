@@ -157,7 +157,7 @@ jobs:
     - name: Installing python2 for legacy builds
       if: env.CHECK_LEGACY_BRANCH == 'true'
       run: |
-        sudo apt-get install python2 python-is-python2 python-is-python3
+        sudo apt-get install python-is-python3
 
     - name: Building PitchBlack
       run: |
