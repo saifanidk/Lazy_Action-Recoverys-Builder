@@ -118,8 +118,8 @@ jobs:
     - name: Clone Device Tree
       run: |
         cd android-recovery
-        git clone -b android-9.0 https://github.com/teamwin/android_device_samsung_star2lte.git device/samsung/star2lte
-        cd device/samsung/star2lte
+        git clone -b android-9.0 https://github.com/teamwin/android_device_samsung_star2lte.git device/samsung/star2lte ./device-tree
+        cd device-tree
         echo "COMMIT_ID=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
     - name: Extracting variables from .mk file
