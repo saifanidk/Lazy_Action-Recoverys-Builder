@@ -33,6 +33,7 @@ on:
         - boot
         - recovery
         - vendorboot
+        - recoveryimage
       LDCHECK:
         description: 'Use LDCHECK'
         required: false
