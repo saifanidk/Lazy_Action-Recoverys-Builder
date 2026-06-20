@@ -152,7 +152,7 @@ jobs:
         if [ ${{ inputs.MANIFEST_BRANCH }} == '11.0' ] || [ ${{ inputs.MANIFEST_BRANCH }} == '12.1' ]; then
             lunch twrp_${{ env.DEVICE_NAME }}-eng && make clean && mka adbd ${{ inputs.BUILD_TARGET }}image
         else
-            lunch omni_${{ env.DEVICE_NAME }}-eng && make clean && mka ${{ inputs.BUILD_TARGET }}image
+            lunch omni_starlte-eng && mka recoveryimage -j1
         fi
 
     - name: Set Build Date # For Build Date Info, currently using Asia/Manila
